@@ -8,97 +8,135 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/static/styles/faqs-style.css">
+    <link rel="stylesheet" href="/static/styles/faq.css">
+    <link rel="stylesheet" href="static/styles/navbar-main.css">
+    <link rel="stylesheet" href="static/styles/navbar-popover.css">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" class="search-input" placeholder="Search...">
-        <button class="search-button"><i class="fas fa-search"></i></button>
+
+    <div id="navbar-placeholder"></div>
+    
+    <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-container">
+            <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <p class="faq-question">1. What services does your accounting firm provide?</p>
+                <p class="faq-answer">Our firm offers a wide range of accounting services, including bookkeeping, financial statement preparation, tax compliance and planning, payroll processing, internal and external auditing, and business advisory services.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">2. Who can benefit from your services?</p>
+                <p class="faq-answer">We cater to individuals, small and medium-sized businesses, corporations, and non-profit organizations that require professional accounting, taxation, and financial consulting services.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">3. How do I know if I need an accountant for my business?</p>
+                <p class="faq-answer">If you struggle with bookkeeping, tax filing, financial reporting, or compliance with government regulations, hiring an accountant can save you time and help ensure accuracy in your financial records.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">4. Can you help with tax filing and compliance?</p>
+                <p class="faq-answer">Yes, we assist with tax preparation, filing, and compliance for individuals and businesses. We ensure that all tax obligations are met on time and in accordance with the latest tax laws and regulations.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">5. What industries do you specialize in?</p>
+                <p class="faq-answer">We have experience working with businesses in various industries, including retail, manufacturing, real estate, services, and non-profit organizations.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">6. Do you offer virtual or remote accounting services?</p>
+                <p class="faq-answer">Yes, we provide both in-person and remote accounting services to accommodate clients who prefer digital communication and cloud-based solutions.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">7. How much do your services cost?</p>
+                <p class="faq-answer">Our fees vary depending on the type and complexity of the service required. We offer customized pricing based on the specific needs of each client. Contact us for a consultation and a detailed quote.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">8. How can I get started with your firm?</p>
+                <p class="faq-answer">You can contact us via phone, email, or our website to schedule an initial consultation. During this meeting, we will discuss your needs and how we can assist you.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">9. How do you ensure the confidentiality of my financial information?</p>
+                <p class="faq-answer">We take data security and confidentiality seriously. Our firm follows strict protocols, including secure digital storage, encrypted communications, and non-disclosure agreements to protect your information.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">10. Can you assist with business registration and compliance?</p>
+                <p class="faq-answer">Yes, we provide assistance with business registration, licensing, and regulatory compliance to ensure your company operates legally and efficiently.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">11. Do you offer financial advice and business consulting?</p>
+                <p class="faq-answer">Yes, we provide business consulting services, including financial forecasting, budgeting, and strategic planning to help businesses grow and improve profitability.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">12. How often should I meet with my accountant?</p>
+                <p class="faq-answer">The frequency of meetings depends on your business needs. Some clients prefer monthly check-ins, while others require quarterly or annual consultations. We tailor our services to fit your schedule and requirements.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">13. What accounting software do you use?</p>
+                <p class="faq-answer">We work with a variety of accounting software, including QuickBooks, Xero, and other cloud-based platforms, ensuring seamless financial management for our clients.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">14. Do you assist with government audits and BIR compliance?</p>
+                <p class="faq-answer">Yes, we help clients prepare for and respond to government audits, ensuring compliance with tax laws and financial regulations.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">15. How can I stay updated with tax deadlines and financial requirements?</p>
+                <p class="faq-answer">We provide regular updates and reminders to our clients regarding important tax deadlines and financial obligations to help them stay compliant and avoid penalties.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-answer"><strong>For further inquiries, feel free to contact us. We look forward to assisting you with your accounting needs!</p>
+            </div>
+        </div>
     </div>
 
-    <!-- FAQ Section -->
-    <div class="faq-container">
-        <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
+    <div id="footer-placeholder"></div>
 
-        <div class="faq-item">
-            <p class="faq-question">1. What services does your accounting firm provide?</p>
-            <p class="faq-answer">Our firm offers a wide range of accounting services, including bookkeeping, financial statement preparation, tax compliance and planning, payroll processing, internal and external auditing, and business advisory services.</p>
-        </div>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Component JavaScript files -->
+    <script src="/static/scripts/scripts.js"></script>
+    <script src="/static/scripts/navbar-main.js"></script>
+    <script src="/static/scripts/footer.js"></script>
+    <script src="/static/scripts/popover.js"></script>
+    <!-- Component JavaScript files -->
+    <script src="/static/scripts/faq-script.js"></script>
+    <script src="/static/scripts/search.js"></script>
 
-        <div class="faq-item">
-            <p class="faq-question">2. Who can benefit from your services?</p>
-            <p class="faq-answer">We cater to individuals, small and medium-sized businesses, corporations, and non-profit organizations that require professional accounting, taxation, and financial consulting services.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">3. How do I know if I need an accountant for my business?</p>
-            <p class="faq-answer">If you struggle with bookkeeping, tax filing, financial reporting, or compliance with government regulations, hiring an accountant can save you time and help ensure accuracy in your financial records.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">4. Can you help with tax filing and compliance?</p>
-            <p class="faq-answer">Yes, we assist with tax preparation, filing, and compliance for individuals and businesses. We ensure that all tax obligations are met on time and in accordance with the latest tax laws and regulations.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">5. What industries do you specialize in?</p>
-            <p class="faq-answer">We have experience working with businesses in various industries, including retail, manufacturing, real estate, services, and non-profit organizations.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">6. Do you offer virtual or remote accounting services?</p>
-            <p class="faq-answer">Yes, we provide both in-person and remote accounting services to accommodate clients who prefer digital communication and cloud-based solutions.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">7. How much do your services cost?</p>
-            <p class="faq-answer">Our fees vary depending on the type and complexity of the service required. We offer customized pricing based on the specific needs of each client. Contact us for a consultation and a detailed quote.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">8. How can I get started with your firm?</p>
-            <p class="faq-answer">You can contact us via phone, email, or our website to schedule an initial consultation. During this meeting, we will discuss your needs and how we can assist you.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">9. How do you ensure the confidentiality of my financial information?</p>
-            <p class="faq-answer">We take data security and confidentiality seriously. Our firm follows strict protocols, including secure digital storage, encrypted communications, and non-disclosure agreements to protect your information.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">10. Can you assist with business registration and compliance?</p>
-            <p class="faq-answer">Yes, we provide assistance with business registration, licensing, and regulatory compliance to ensure your company operates legally and efficiently.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">11. Do you offer financial advice and business consulting?</p>
-            <p class="faq-answer">Yes, we provide business consulting services, including financial forecasting, budgeting, and strategic planning to help businesses grow and improve profitability.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">12. How often should I meet with my accountant?</p>
-            <p class="faq-answer">The frequency of meetings depends on your business needs. Some clients prefer monthly check-ins, while others require quarterly or annual consultations. We tailor our services to fit your schedule and requirements.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">13. What accounting software do you use?</p>
-            <p class="faq-answer">We work with a variety of accounting software, including QuickBooks, Xero, and other cloud-based platforms, ensuring seamless financial management for our clients.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">14. Do you assist with government audits and BIR compliance?</p>
-            <p class="faq-answer">Yes, we help clients prepare for and respond to government audits, ensuring compliance with tax laws and financial regulations.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-question">15. How can I stay updated with tax deadlines and financial requirements?</p>
-            <p class="faq-answer">We provide regular updates and reminders to our clients regarding important tax deadlines and financial obligations to help them stay compliant and avoid penalties.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="faq-answer"><strong>For further inquiries, feel free to contact us. We look forward to assisting you with your accounting needs!</p>
-        </div>
-
-    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 </html>

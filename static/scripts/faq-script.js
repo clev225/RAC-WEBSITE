@@ -1,3 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const faqIcon = document.getElementById('faqIcon');
+    
+    if (faqIcon) {
+        faqIcon.addEventListener('click', function() {
+            window.location.href = 'FAQs.html';
+        });
+    }
+});
+
 function toggleFAQ(faqItem) {
     const answer = faqItem.querySelector('.faq-answer');
     if (answer.style.maxHeight) {
