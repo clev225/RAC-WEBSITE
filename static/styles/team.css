@@ -286,6 +286,7 @@ body {
     flex-wrap: wrap;
     margin: auto;
     justify-content: flex-start;
+    margin-left: 3px;
 }
 
 .inner-container {
@@ -318,20 +319,52 @@ body {
     flex-direction: row;
     align-items: center;
     box-shadow: rgba(134, 134, 134, 0.16) 0px 6px 24px;
-    border-radius: 6px;
+    border-radius: 15px; /* Increased border radius */
     background-color: white;
-    max-width: 750px;
-    padding: 40px 30px;
+    max-width: 900px; /* Increased max-width */
+    padding: 40px 50px; /* Increased horizontal padding */
+    margin: 0 auto; /* Center the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(134, 134, 134, 0.25) 0px 8px 28px;
+}
+
+.card-content {
+    text-align: left;
+    margin-left: 50px; /* Increased margin */
+    flex: 1; /* Allow content to take remaining space */
+    padding-right: 20px; /* Add right padding */
 }
 
 .img-wrapper {
-    width: 175px;
+    min-width: 175px; /* Ensure minimum width */
     height: 175px;
     clip-path: circle(50% at 50% 50%);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Update responsive breakpoint for better layout */
+@media (max-width: 768px) {
+
+    .card {
+        padding: 30px;
+        margin: 0 15px;
+        flex-direction: column;
+    }
+
+    .card-content {
+        margin-left: 0;
+        padding-right: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
 }
 
 .img-wrapper img {
@@ -428,7 +461,7 @@ body {
     }
 
     .card-content {
-        margin-left: 0;
+        margin-left: 80px;;
         text-align: center;
         width: 100%;
         max-width: 400px;
@@ -460,6 +493,14 @@ body {
 }
 
 @media (max-width: 500px) {
+
+    .card-content{
+        margin-left: 40px;
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+    }
+
     .outer-container {
         padding: 0 20px;
     }
@@ -480,7 +521,7 @@ body {
 
     .img-wrapper {
         width: 150px;
-        height: 150px;
+        height: 200px;
     }
 
     .name {
